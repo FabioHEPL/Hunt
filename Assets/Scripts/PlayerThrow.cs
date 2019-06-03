@@ -4,24 +4,25 @@ using UnityEngine;
 
 public class PlayerThrow : MonoBehaviour
 {
-    bool fury;
-    bool canFury;
+    bool fury = false;
+    bool canFury = false;
 
     private void Start()
     {
-        GetComponent.
+        GetComponent<PlayerGrow>().onPlayerGrowEvent += onPlayerGrowEventHolder;
+        FindObjectOfType<InputManager>().ThrowButtonPressed += onPresseRageButton;
         GetComponent<ColliderManager>().onCollisionEvent += OnCollisionEvent;
     }
 
     private void OnCollisionEvent(object o, ColliderManager.onCollisionEventArgs args)
     {
-        if (args.type == ColliderManager.colliderType.obstacle && )
+        if (args.type == ColliderManager.colliderType.obstacle && fury)
         {
              
         }
     }
 
-    private void onPresseRageButton(object o, )
+    private void onPresseRageButton(object o, ThrowButtonPressedArgs args)
     {
         if (canFury)
         {
@@ -32,6 +33,26 @@ public class PlayerThrow : MonoBehaviour
     private void Fury()
     {
         fury = true;
+        Invoke("StopFury", DataContainer.singleton.DataThomas.timeFury);
+    }
 
+    private void StopFury()
+    {
+        fury = false;
+    }
+
+    private void Throw()
+    {
+
+    }
+
+    private void onPlayerGrowEventHolder(object o, PlayerGrow.onPlayerGrowEnventArgs args)
+    {
+        if (args.numberOfGrow >= DataContainer.singleton.DataThomas.nomberOfGrow)
+        {
+            canFury = true;
+        }
+        else
+            canFury = false;
     }
 }

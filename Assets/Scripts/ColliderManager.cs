@@ -8,7 +8,8 @@ public class ColliderManager : MonoBehaviour
     public enum colliderType
     {
         powerUp,
-        dog
+        dog,
+        obstacle
     }
 
     public class onCollisionEventArgs : EventArgs
