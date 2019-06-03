@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be60e879794de9745b19acccb6832121, type: 3}
   m_Name: Thibaut
   m_EditorClassIdentifier: 
+  scoreMultiplier: 1
+  timeToAddMultiplier: 5
+  multiplierForce: 1
+  score: 0
+  scorePerTime: 10
