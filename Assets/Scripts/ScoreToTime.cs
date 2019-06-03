@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleDestroyWall : MonoBehaviour
+public class ScoreToTime : MonoBehaviour
 {
+      
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +16,4 @@ public class ObstacleDestroyWall : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(collision.gameObject);
-    }
-
 }
