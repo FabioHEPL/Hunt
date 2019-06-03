@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class BulletMove : MonoBehaviour
 {
-    void _BulletMove()
+    public float bulletSpeed;
+
+    private void Move()
     {
-        transform.Translate(Vector3.right * BulletSpeed* Time.deltaTime);
+        transform.Translate(Vector3.right * bulletSpeed * Time.deltaTime);
     }
 
 }
