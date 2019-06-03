@@ -18,7 +18,7 @@ public class PlayerThrow : MonoBehaviour
     {
         if (args.type == ColliderManager.colliderType.obstacle && fury)
         {
-             
+            Throw();
         }
     }
 
