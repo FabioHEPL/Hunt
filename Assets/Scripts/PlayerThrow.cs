@@ -33,7 +33,7 @@ public class PlayerThrow : MonoBehaviour
     private void Fury()
     {
         fury = true;
-        Invoke("StopFury", DataContainer.singleton.DataThomas.timeFury);
+        Invoke("StopFury", DataContainer.singleton.data.timeFury);
     }
 
     private void StopFury()
@@ -48,7 +48,7 @@ public class PlayerThrow : MonoBehaviour
 
     private void onPlayerGrowEventHolder(object o, PlayerGrow.onPlayerGrowEnventArgs args)
     {
-        if (args.numberOfGrow >= DataContainer.singleton.DataThomas.nomberOfGrow)
+        if (args.numberOfGrow >= DataContainer.singleton.data.nomberOfGrow)
         {
             canFury = true;
         }

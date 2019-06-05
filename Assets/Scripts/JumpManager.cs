@@ -9,6 +9,7 @@ public class JumpManager : MonoBehaviour
     public Vector2 direction = Vector2.up;
     public float duration = 5f;
     public float maxHeight = 10f;
+    public float speed = 0.1f;
 
     private void OnEnable()
     {
@@ -22,7 +23,10 @@ public class JumpManager : MonoBehaviour
 
     private void PlayerManager_Jump(object sender, JumpArgs e)
     {
-        
+        if (!jumping)
+        {
+            StartCoroutine(Jump());
+        }
     }
 
     // Start is called before the first frame update
@@ -40,11 +44,17 @@ public class JumpManager : MonoBehaviour
 
     public IEnumerator Jump()
     {
-        while (jumping)
-        {
-            
+        jumping = true;
 
+        float currentTime = 0;
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            transform.position += (Vector3)(Vector2.up * speed);
             yield return null;
         }
+
+        jumping = false;
     }
 }

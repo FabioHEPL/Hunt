@@ -13,9 +13,9 @@ public class ScoreMultiplier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreMultiplier = DataContainer.singleton.DataMaster.score.scoreMultiplier;
-        timeToAddMultiplier = DataContainer.singleton.DataMaster.score.timeToAddMultiplier;
-        multiplierForce = DataContainer.singleton.DataMaster.score.multiplierForce;
+        scoreMultiplier = DataContainer.singleton.data.score.scoreMultiplier;
+        timeToAddMultiplier = DataContainer.singleton.data.score.timeToAddMultiplier;
+        multiplierForce = DataContainer.singleton.data.score.multiplierForce;
 
         StartCoroutine("AddMultiplier");
     }

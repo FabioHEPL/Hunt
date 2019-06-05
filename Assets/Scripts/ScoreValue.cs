@@ -10,9 +10,9 @@ public class ScoreValue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score = DataContainer.singleton.DataMaster.score.score;
-        scoreMultiplier = DataContainer.singleton.DataMaster.score.scoreMultiplier;
-        scorePerTime = DataContainer.singleton.DataMaster.score.scorePerTime;
+        score = DataContainer.singleton.data.score.score;
+        scoreMultiplier = DataContainer.singleton.data.score.scoreMultiplier;
+        scorePerTime = DataContainer.singleton.data.score.scorePerTime;
     }
 
     // Update is called once per frame

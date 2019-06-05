@@ -11,7 +11,7 @@ public class ScoreDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score = DataContainer.singleton.DataMaster.score.score;
+        score = DataContainer.singleton.data.score.score;
     }
 
     // Update is called once per frame

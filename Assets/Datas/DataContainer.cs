@@ -5,7 +5,7 @@ using UnityEngine;
 public class DataContainer : MonoBehaviour
 {
     public static DataContainer singleton;
-    public Data DataMaster;
+    public Data data;
 
     void Awake()
     {
