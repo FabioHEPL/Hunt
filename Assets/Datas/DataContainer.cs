@@ -5,10 +5,8 @@ using UnityEngine;
 public class DataContainer : MonoBehaviour
 {
     public static DataContainer singleton;
-    public Data Data;
-    public DataThomas DataThomas;
-    public DataFabio DataFabio;
-    public DataLudo DataLudo;
+    public Data DataMaster;
+
     void Awake()
     {
         if (singleton != null)

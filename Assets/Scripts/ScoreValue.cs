@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class ScoreValue : MonoBehaviour
 {
+        float score;
+        float scoreMultiplier;
+        float scorePerTime;
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = DataContainer.singleton.DataMaster.score.score;
+        scoreMultiplier = DataContainer.singleton.DataMaster.score.scoreMultiplier;
+        scorePerTime = DataContainer.singleton.DataMaster.score.scorePerTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        var scoreMultiplier = DataContainer.singleton.Data.scoreMultiplier;
-        var score = DataContainer.singleton.Data.score;
-        var scorePerTime = DataContainer.singleton.Data.scorePerTime;
-
-        score += scorePerTime * scoreMultiplier;
-        Debug.Log(score);
+        score += scorePerTime/60;
+        Debug.Log(score.ToString("0.00"));
     }
 }

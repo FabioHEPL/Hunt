@@ -5,31 +5,34 @@ using UnityEngine;
 
 public class ScoreMultiplier : MonoBehaviour
 {
+
+    float scoreMultiplier;
+    float timeToAddMultiplier;
+    float multiplierForce;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreMultiplier = DataContainer.singleton.DataMaster.score.scoreMultiplier;
+        timeToAddMultiplier = DataContainer.singleton.DataMaster.score.timeToAddMultiplier;
+        multiplierForce = DataContainer.singleton.DataMaster.score.multiplierForce;
+
+        StartCoroutine("AddMultiplier");
     }
 
     // Update is called once per frame
     void Update()
     {
-        var timeToAddMultiplier = DataContainer.singleton.Data.timeToAddMultiplier;
 
-        var time = 0f;
-        time += Time.deltaTime;
-        if (time >= timeToAddMultiplier)
-        {
-            AddMultiplier();
-            time = 0f;
-        }
     }
 
-    private void AddMultiplier()
+   
+
+    IEnumerator AddMultiplier()
     {
-        var scoreMultiplier = DataContainer.singleton.Data.scoreMultiplier;
-        var multiplierForce = DataContainer.singleton.Data.multiplierForce;
-
         scoreMultiplier += multiplierForce;
+        yield return new WaitForSeconds(timeToAddMultiplier);
+        StartCoroutine("AddMultiplier");
     }
+
 }
