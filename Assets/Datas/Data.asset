@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: DataMaster
+  m_Name: Data
   m_EditorClassIdentifier: Assembly-CSharp::Data
-  scoreMultiplier: 0
-  timeToAddMultiplier: 0
-  multiplierForce: 0
-  score: 0
-  scorePerTime: 0
-  test: 0
+  score:
+    scoreMultiplier: 1
+    timeToAddMultiplier: 1
+    multiplierForce: 0.5
+    score: 0
+    scorePerTime: 1
+    scoreText: {fileID: 0}
+  timeFury: 0
+  nomberOfGrow: 0

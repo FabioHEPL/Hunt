@@ -5,8 +5,45 @@ using UnityEngine;
 
 public class ScoreMultiplier : MonoBehaviour
 {
-
     float scoreMultiplier;
+    float multiplierForce;
+    float timeToMultiply;
+
+    public class ScoreMultiplyEventArgs : EventArgs
+    {
+       public float multiplier;
+    }
+
+    public EventHandler<ScoreMultiplyEventArgs> onScoreMultiply;
+
+    private void OnScoreMultiply(ScoreMultiplyEventArgs e)
+    {
+        if (onScoreMultiply != null)
+            onScoreMultiply(this, e);
+    }
+
+
+    public void Start()
+    {
+        scoreMultiplier = DataContainer.singleton.data.score.scoreMultiplier;
+        multiplierForce = DataContainer.singleton.data.score.multiplierForce;
+        timeToMultiply = DataContainer.singleton.data.score.timeToAddMultiplier;
+        StartCoroutine("AddMultiplier");
+    }
+
+    IEnumerator AddMultiplier()
+    {
+        yield return new WaitForSeconds(timeToMultiply);
+        scoreMultiplier += multiplierForce;
+        OnScoreMultiply(new ScoreMultiplyEventArgs() { multiplier = scoreMultiplier });
+        StartCoroutine("AddMultiplier");
+    }
+
+
+}
+
+/*
+     float scoreMultiplier;
     float timeToAddMultiplier;
     float multiplierForce;
 
@@ -35,4 +72,4 @@ public class ScoreMultiplier : MonoBehaviour
         StartCoroutine("AddMultiplier");
     }
 
-}
+    */
