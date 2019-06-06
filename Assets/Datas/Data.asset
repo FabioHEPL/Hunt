@@ -12,12 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Data
   m_EditorClassIdentifier: Assembly-CSharp::Data
+  hunter:
+    bullet: {fileID: 0}
+    BulletSpeed: 0
+    cooldown: 0
+    maximumAngle: 10
+    minimunAngle: -10
+  backgroundSpeed: 0.1
+  itemSpeed: 0.1
+  timeToGameOver: 2
   score:
     scoreMultiplier: 1
     timeToAddMultiplier: 1
-    multiplierForce: 0.5
+    multiplierForce: 0.1
     score: 0
     scorePerTime: 1
-    scoreText: {fileID: 0}
+    coinScore: 100
   timeFury: 0
   nomberOfGrow: 0
+  grow: 1.2
+  back: 1
+  playerPosition: {x: -1, y: -3}
