@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class BulletMove : MonoBehaviour
 {
-    public float bulletSpeed;
-
-    private void Move()
+    private float bulletSpeed;
+    private void Update()
     {
         transform.Translate(Vector3.right * bulletSpeed * Time.deltaTime);
     }
+    private void Start()
+    {
+        bulletSpeed = DataContainer.singleton.data.hunter.BulletSpeed;
+
+    }
+
 
 }
 
