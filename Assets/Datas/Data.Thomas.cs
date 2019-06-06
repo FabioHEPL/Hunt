@@ -8,5 +8,8 @@ using UnityEngine;
 // La classe doit descendre de scriptableObject qui est une classe de Unity
 public partial class Data : ScriptableObject
 {
-    public float test;
+    public float timeFury;
+
+    public int nomberOfGrow;
+    public float grow = 1.2f;
 }

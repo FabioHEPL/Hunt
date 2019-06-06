@@ -10,11 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: DataMaster
+  m_Name: Data
   m_EditorClassIdentifier: Assembly-CSharp::Data
-  scoreMultiplier: 0
-  timeToAddMultiplier: 0
-  multiplierForce: 0
-  score: 0
-  scorePerTime: 0
-  test: 0
+  hunter:
+    bullet: {fileID: 5001930910866695278, guid: 38b752cc3b8fd5f4a9f6978a785c0dce,
+      type: 3}
+    BulletSpeed: 15
+    cooldown: 2
+  score:
+    scoreMultiplier: 0
+    timeToAddMultiplier: 0
+    multiplierForce: 0
+    score: 0
+    scorePerTime: 0
+  timeFury: 0
+  nomberOfGrow: 0

@@ -1,22 +1,24 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    public Text scoreText;
-    float score;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        score = DataContainer.singleton.data.score.score;
+        FindObjectOfType<ScoreManager>().onScoreChangeEvent += ScoreChangeEventListener;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        scoreText.GetComponent<Text>().text = score.ToString("0.00"); ;
+       
+    }
+
+    private void ScoreChangeEventListener(object sender, ScoreManager.OnScoreChangeEventArgs e)
+    {
+        GetComponent<Text>().text = e.score.ToString();
     }
 }

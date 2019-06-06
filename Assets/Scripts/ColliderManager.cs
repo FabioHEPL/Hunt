@@ -7,6 +7,7 @@ public class ColliderManager : MonoBehaviour
 {
     public enum colliderType
     {
+        coin,
         powerUp,
         dog,
         obstacle
