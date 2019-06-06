@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerBack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private class OnPlayerBackEventAgrs : EventArgs
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private EventHandler<OnPlayerBackEventAgrs> onPlayerBack;
+
+    private void OnPlayerBack(OnPlayerBackEventAgrs e)
     {
-        
+        if (onPlayerBack != null)
+            onPlayerBack(this, e);
     }
 }
