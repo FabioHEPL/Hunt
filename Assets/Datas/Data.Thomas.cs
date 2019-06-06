@@ -9,6 +9,7 @@ using UnityEngine;
 public partial class Data : ScriptableObject
 {
     public float timeFury;
-    public int nomberOfGrow;
 
+    public int nomberOfGrow;
+    public float grow = 1.2f;
 }

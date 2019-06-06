@@ -21,7 +21,7 @@ public class PlayerGrow : MonoBehaviour
     void Grow()
     {
         numberOfGrow++;
-        transform.localScale *= 1.2f;
+        transform.localScale *= DataContainer.singleton.data.grow;
         OnPlayerGrowEvent(new onPlayerGrowEnventArgs { numberOfGrow = numberOfGrow });
     }
     private void Start()
