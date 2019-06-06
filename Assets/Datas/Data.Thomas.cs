@@ -12,4 +12,7 @@ public partial class Data : ScriptableObject
 
     public int nomberOfGrow;
     public float grow = 1.2f;
+
+    public float back = 1.0f;
+    public Vector2 playerPosition = new Vector2(-1.0f, -3.0f);
 }
