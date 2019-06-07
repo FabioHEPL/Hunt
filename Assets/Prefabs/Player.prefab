@@ -86,9 +86,9 @@ MonoBehaviour:
   minGroundNormalY: 0.65
   gravityModifier: 1
   maxSpeed: 7
-  jumpTakeOffSpeed: 7
+  jumpTakeOffSpeed: 5
   jumping: 0
-  duration: 0.25
+  duration: -0.08
 --- !u!61 &851581603868831105
 BoxCollider2D:
   m_ObjectHideFlags: 0
