@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - ScoreNumber
+  - coin
+  - dog
+  - obstacle
+  - bullet
   layers:
   - Default
   - TransparentFX

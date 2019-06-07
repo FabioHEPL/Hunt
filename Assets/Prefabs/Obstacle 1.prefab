@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1410493293902574598}
+  - component: {fileID: 1585235175}
+  - component: {fileID: 1585235173}
   m_Layer: 0
   m_Name: Obstacle 1
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +36,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1585235175
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3051759183457040339}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1585235173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3051759183457040339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61aecafbbfac8c14181bfbe3a5bdad11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &417407679837996825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45,6 +80,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: caisse-png-2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989469483034881323, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5085634309546546693, guid: e2a84bbb28f61524e96d18e103f96e05,
         type: 3}
@@ -101,6 +141,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8215970031033409832, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a84bbb28f61524e96d18e103f96e05, type: 3}
 --- !u!4 &4852949000590725404 stripped
@@ -120,6 +170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: caisse-png-2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989469483034881323, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5085634309546546693, guid: e2a84bbb28f61524e96d18e103f96e05,
         type: 3}
@@ -176,6 +231,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8215970031033409832, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a84bbb28f61524e96d18e103f96e05, type: 3}
 --- !u!4 &4643144705402293153 stripped
@@ -195,6 +260,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: caisse-png-2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989469483034881323, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5085634309546546693, guid: e2a84bbb28f61524e96d18e103f96e05,
         type: 3}
@@ -251,6 +321,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8215970031033409832, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a84bbb28f61524e96d18e103f96e05, type: 3}
 --- !u!4 &1149066720135351658 stripped
@@ -270,6 +350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: caisse-png-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989469483034881323, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5085634309546546693, guid: e2a84bbb28f61524e96d18e103f96e05,
         type: 3}
@@ -325,6 +410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215970031033409832, guid: e2a84bbb28f61524e96d18e103f96e05,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a84bbb28f61524e96d18e103f96e05, type: 3}

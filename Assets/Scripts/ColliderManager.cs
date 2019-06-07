@@ -10,7 +10,8 @@ public class ColliderManager : MonoBehaviour
         coin,
         powerUp,
         dog,
-        obstacle
+        obstacle,
+        bullet
     }
 
     public class onCollisionEventArgs : EventArgs
@@ -30,7 +31,7 @@ public class ColliderManager : MonoBehaviour
     {
        string colliderTag = collision.gameObject.tag;
         colliderType colliderType;
-
+        Debug.Log(colliderTag);
         if (gameObject.tag == "Player")
         {
             switch (colliderTag)
@@ -51,6 +52,12 @@ public class ColliderManager : MonoBehaviour
 
                 case ("obstacle"):
                     colliderType = colliderType.obstacle;
+                    OnCollisionEvent(new onCollisionEventArgs() { type = colliderType });
+                    break;
+
+                case ("bullet"):
+                    colliderType = colliderType.obstacle;
+                    OnCollisionEvent(new onCollisionEventArgs() { type = colliderType });
                     break;
 
                 default:
