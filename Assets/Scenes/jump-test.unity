@@ -135,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 7784100271110538809, guid: fa60ff82b48f0fd40940031cf369d5b0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2546994187910341172, guid: fa60ff82b48f0fd40940031cf369d5b0,
         type: 3}
@@ -539,6 +539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 116916781998687016, guid: 6f5b1c5c39f615a4e906e304c8c982ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 116916781998687013, guid: 6f5b1c5c39f615a4e906e304c8c982ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -611,7 +616,7 @@ PrefabInstance:
     - target: {fileID: 7784100271110538809, guid: fa60ff82b48f0fd40940031cf369d5b0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2546994187910341172, guid: fa60ff82b48f0fd40940031cf369d5b0,
         type: 3}
@@ -725,7 +730,7 @@ PrefabInstance:
     - target: {fileID: 3016451568717336703, guid: d4d09a8814cb2924cafa73b2055f46a6,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3016451568717336698, guid: d4d09a8814cb2924cafa73b2055f46a6,
         type: 3}
@@ -799,7 +804,7 @@ PrefabInstance:
     - target: {fileID: 3051759183457040339, guid: 5172bdfbc7395e143b20bc466886d523,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1410493293902574598, guid: 5172bdfbc7395e143b20bc466886d523,
         type: 3}
@@ -981,18 +986,6 @@ PrefabInstance:
       objectReference: {fileID: 610963267}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7fe7afc2d0809f45a4fee21ecb4956e, type: 3}
---- !u!114 &2051037417 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8639544485318034181, guid: cd604421859a0604e8eb51ab94e213b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 362441545}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572f52c9d58ae7b4b90d0c0916788089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2067141898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,7 +1058,7 @@ PrefabInstance:
     - target: {fileID: 7784100271110538809, guid: fa60ff82b48f0fd40940031cf369d5b0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2546994187910341172, guid: fa60ff82b48f0fd40940031cf369d5b0,
         type: 3}
@@ -1299,21 +1292,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 851581603868831111, guid: 5ac3dd0943d96da47ac0ed8242f1d5af,
-        type: 3}
-      propertyPath: inputManager
-      value: 
-      objectReference: {fileID: 2051037417}
-    - target: {fileID: 851581603868831108, guid: 5ac3dd0943d96da47ac0ed8242f1d5af,
-        type: 3}
-      propertyPath: jumpTakeOffSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 851581603868831108, guid: 5ac3dd0943d96da47ac0ed8242f1d5af,
-        type: 3}
-      propertyPath: duration
-      value: -0.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ac3dd0943d96da47ac0ed8242f1d5af, type: 3}

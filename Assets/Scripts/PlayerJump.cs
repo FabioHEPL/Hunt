@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
-{   
+{
+    public event Action Executed;
+    public event Action Grounded;
+
     public bool Allowed
     {
         get { return _allowed; }
@@ -49,12 +53,25 @@ public class PlayerJump : MonoBehaviour
         if (_allowed)
         {
             StartCoroutine(Execute());
+            OnExecute();
         }
     }
+
+    private void OnExecute()
+    {
+        Executed?.Invoke();
+    }
+
+    private void OnGronded()
+    {
+        Grounded?.Invoke();
+    }
+
 
     private void Physics_Grounded()
     {
         _allowed = true;
+        OnGronded();        
     }
 
     // Start is called before the first frame update

@@ -37,7 +37,7 @@ public class Coin : MonoBehaviour
         if (e.type.ToString() == "coin")
         {
             OnCoinCollectEvent(new OnCoinCollectEventArgs() { score = coinScore });
-            Destroy(gameObject);
+            Destroy(e.collided);
         }
     }
 }

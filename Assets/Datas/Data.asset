@@ -16,7 +16,7 @@ MonoBehaviour:
     bullet: {fileID: 6411233173573338376, guid: 00183e2c13bd2a14db5feba19996a1b3,
       type: 3}
     BulletSpeed: 7
-    cooldown: 1
+    cooldown: 2.5
     maximumAngle: 10
     minimunAngle: -10
   spawn:
@@ -42,4 +42,4 @@ MonoBehaviour:
   nomberOfGrow: 0
   grow: 1.2
   back: 1
-  playerPosition: {x: 2, y: -3}
+  playerPosition: {x: 3, y: -3}

@@ -5,6 +5,8 @@ using System;
 
 public class ColliderManager : MonoBehaviour
 {
+    
+
     public enum colliderType
     {
         coin,
@@ -17,6 +19,7 @@ public class ColliderManager : MonoBehaviour
     public class onCollisionEventArgs : EventArgs
     {
         public ColliderManager.colliderType type;
+        public GameObject collided;
     }
 
     public EventHandler<onCollisionEventArgs> onCollisionEvent;
@@ -38,7 +41,7 @@ public class ColliderManager : MonoBehaviour
             {
                 case ("coin"):
                     colliderType = colliderType.coin;
-                    OnCollisionEvent(new onCollisionEventArgs() { type = colliderType });
+                    OnCollisionEvent(new onCollisionEventArgs() { type = colliderType, collided = collision.gameObject});
                     break;
 
                 case ("powerUp"):
