@@ -1305,6 +1305,16 @@ PrefabInstance:
       propertyPath: inputManager
       value: 
       objectReference: {fileID: 2051037417}
+    - target: {fileID: 851581603868831108, guid: 5ac3dd0943d96da47ac0ed8242f1d5af,
+        type: 3}
+      propertyPath: jumpTakeOffSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 851581603868831108, guid: 5ac3dd0943d96da47ac0ed8242f1d5af,
+        type: 3}
+      propertyPath: duration
+      value: -0.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ac3dd0943d96da47ac0ed8242f1d5af, type: 3}
 --- !u!1001 &8747143244078850509
