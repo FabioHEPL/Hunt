@@ -602,6 +602,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Doggo
       objectReference: {fileID: 0}
+    - target: {fileID: 3016451568717336703, guid: d4d09a8814cb2924cafa73b2055f46a6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3016451568717336698, guid: d4d09a8814cb2924cafa73b2055f46a6,
         type: 3}
       propertyPath: m_LocalPosition.x

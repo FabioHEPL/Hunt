@@ -6,7 +6,6 @@ public class PlayerPhysics : ObjectPhysics
 {
     private PlayerManager manager;
 
-
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
 
@@ -26,24 +25,6 @@ public class PlayerPhysics : ObjectPhysics
         manager = FindObjectOfType<PlayerManager>();
     }
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        manager.JumpRequest += OnPlayerManagerJumpRequest;
-    }
-
-    private void OnDisable()
-    {
-        manager.JumpRequest -= OnPlayerManagerJumpRequest;
-    }
-
-    private void OnPlayerManagerJumpRequest(object sender, JumpArgs e)
-    {
-        if (!jumping)
-        {
-            StartCoroutine(Jump());
-        }
-    }
 
     protected override void ComputeVelocity()
     {
@@ -51,15 +32,15 @@ public class PlayerPhysics : ObjectPhysics
 
         move.x = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump") && _grounded)
         {
-            velocity.y = jumpTakeOffSpeed;
+            _velocity.y = jumpTakeOffSpeed;
         }
         else if (Input.GetButtonUp("Jump"))
         {
-            if (velocity.y > 0)
+            if (_velocity.y > 0)
             {
-                velocity.y = velocity.y * 0.5f;
+                _velocity.y = _velocity.y * 0.5f;
             }
         }
 
@@ -73,22 +54,5 @@ public class PlayerPhysics : ObjectPhysics
         //animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
         targetVelocity = move * maxSpeed;
-    }
-
-
-    public IEnumerator Jump()
-    {
-        jumping = true;
-
-        float currentTime = 0;
-
-        while (currentTime < duration)
-        {
-            currentTime += Time.deltaTime;
-            velocity.y = jumpTakeOffSpeed;
-            yield return null;
-        }
-
-        jumping = false;
     }
 }

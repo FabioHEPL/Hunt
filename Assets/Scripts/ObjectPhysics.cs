@@ -1,23 +1,41 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectPhysics : MonoBehaviour
 {
+    //public bool Grounded
+    //{
+    //    get { return _grounded; }
+    // //   set { _grounded = value; }
+    //}
+
+    
+
+    public Vector2 Velocity
+    {
+        get { return _velocity; }
+        set { _velocity = value; }
+    }
+
+
     public float minGroundNormalY = .65f;
     public float gravityModifier = 1f;
 
     protected Vector2 targetVelocity;
-    protected bool grounded;
+    protected bool _grounded = false;
     protected Vector2 groundNormal;
     protected Rigidbody2D rb2d;
-    protected Vector2 velocity;
+    protected Vector2 _velocity;
     protected ContactFilter2D contactFilter;
     protected RaycastHit2D[] hitBuffer = new RaycastHit2D[16];
     protected List<RaycastHit2D> hitBufferList = new List<RaycastHit2D>(16);
 
     protected const float minMoveDistance = 0.001f;
     protected const float shellRadius = 0.01f;
+
+    public event Action Grounded;
 
     protected virtual void OnEnable()
     {
@@ -26,7 +44,7 @@ public class ObjectPhysics : MonoBehaviour
 
     void Start()
     {
-        contactFilter.useTriggers = true;
+        contactFilter.useTriggers = false;
         contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
         contactFilter.useLayerMask = true;
     }
@@ -48,12 +66,12 @@ public class ObjectPhysics : MonoBehaviour
 
     void FixedUpdate()
     {
-        velocity += gravityModifier * Physics2D.gravity * Time.deltaTime;
-        velocity.x = targetVelocity.x;
+        _velocity += gravityModifier * Physics2D.gravity * Time.deltaTime;
+        _velocity.x = targetVelocity.x;
 
-        grounded = false;
+        _grounded = false;
 
-        Vector2 deltaPosition = velocity * Time.deltaTime;
+        Vector2 deltaPosition = _velocity * Time.deltaTime;
 
         Vector2 moveAlongGround = new Vector2(groundNormal.y, -groundNormal.x);
 
@@ -84,7 +102,9 @@ public class ObjectPhysics : MonoBehaviour
                 Vector2 currentNormal = hitBufferList[i].normal;
                 if (currentNormal.y > minGroundNormalY)
                 {
-                    grounded = true;
+                    _grounded = true;
+                    // fire grounded event
+                    OnGrounded();
                     if (yMovement)
                     {
                         groundNormal = currentNormal;
@@ -92,10 +112,10 @@ public class ObjectPhysics : MonoBehaviour
                     }
                 }
 
-                float projection = Vector2.Dot(velocity, currentNormal);
+                float projection = Vector2.Dot(_velocity, currentNormal);
                 if (projection < 0)
                 {
-                    velocity = velocity - projection * currentNormal;
+                    _velocity = _velocity - projection * currentNormal;
                 }
 
                 float modifiedDistance = hitBufferList[i].distance - shellRadius;
@@ -104,5 +124,11 @@ public class ObjectPhysics : MonoBehaviour
         }
 
         rb2d.position = rb2d.position + move.normalized * distance;
+    }
+
+    private void OnGrounded()
+    {
+        Grounded?.Invoke();
+
     }
 }
