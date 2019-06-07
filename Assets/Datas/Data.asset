@@ -42,4 +42,8 @@ MonoBehaviour:
   nomberOfGrow: 0
   grow: 1.2
   back: 1
+<<<<<<< HEAD
   playerPosition: {x: 1, y: -3}
+=======
+  playerPosition: {x: 2, y: -3}
+>>>>>>> 8db169e66d3011816b3ccee1270783d7f0f1582b
