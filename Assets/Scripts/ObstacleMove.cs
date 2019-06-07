@@ -13,6 +13,6 @@ public class ObstacleMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       transform
+
     }
 }
