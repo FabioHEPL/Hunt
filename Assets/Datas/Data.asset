@@ -33,4 +33,4 @@ MonoBehaviour:
   nomberOfGrow: 0
   grow: 1.2
   back: 1
-  playerPosition: {x: -1, y: -3}
+  playerPosition: {x: 1, y: -3}
