@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ScoreNumber
+  - coin
+  - dog
+  - obstacle
+  - bullet
+  - InputManager
   layers:
   - Default
   - TransparentFX

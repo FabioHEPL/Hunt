@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Data
+  m_EditorClassIdentifier: Assembly-CSharp::Data
+  hunter:
+    bullet: {fileID: 6411233173573338376, guid: 00183e2c13bd2a14db5feba19996a1b3,
+      type: 3}
+    BulletSpeed: 7
+    cooldown: 2.5
+    maximumAngle: 10
+    minimunAngle: -10
+  spawn:
+    minTimeToSpawnCoin: 1
+    maxTimeToSpawnCoin: 3
+    minTimeToSpawnObstacle: 3
+    maxTimeToSpawnObstacle: 6
+    coin: {fileID: 116916781998687016, guid: 6f5b1c5c39f615a4e906e304c8c982ec, type: 3}
+    obstaclesPrefabs:
+    - {fileID: 3051759183457040339, guid: 5172bdfbc7395e143b20bc466886d523, type: 3}
+    - {fileID: 7784100271110538809, guid: fa60ff82b48f0fd40940031cf369d5b0, type: 3}
+  score:
+    scoreMultiplier: 1
+    timeToAddMultiplier: 5
+    multiplierForce: 0.2
+    score: 0
+    scorePerTime: 5
+    coinScore: 100
+  backgroundSpeed: 7
+  itemSpeed: 3.5
+  timeToGameOver: 0
+  timeFury: 0
+  nomberOfGrow: 0
+  grow: 1.2
+  back: 1
+  playerPosition: {x: 3, y: -3}
