@@ -19,7 +19,6 @@ public class PlayerBack : MonoBehaviour
 
     private void OnCollisionEventHandler(object sender, ColliderManager.onCollisionEventArgs e)
     {
-        Debug.Log(e);
         if (e.type.ToString() == "obstacle" || e.type.ToString()  == "bullet")
         {
             OnPlayerBack(new OnPlayerBackEventAgrs());

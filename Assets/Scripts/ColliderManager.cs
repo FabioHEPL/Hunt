@@ -31,7 +31,7 @@ public class ColliderManager : MonoBehaviour
     {
        string colliderTag = collision.gameObject.tag;
         colliderType colliderType;
-        Debug.Log(colliderTag);
+        
         if (gameObject.tag == "Player")
         {
             switch (colliderTag)
