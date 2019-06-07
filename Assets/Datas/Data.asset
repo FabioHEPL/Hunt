@@ -19,9 +19,15 @@ MonoBehaviour:
     cooldown: 1
     maximumAngle: 10
     minimunAngle: -10
-  backgroundSpeed: 7
-  itemSpeed: 3.5
-  timeToGameOver: 0
+  spawn:
+    minTimeToSpawnCoin: 1
+    maxTimeToSpawnCoin: 3
+    minTimeToSpawnObstacle: 3
+    maxTimeToSpawnObstacle: 6
+    coin: {fileID: 116916781998687016, guid: 6f5b1c5c39f615a4e906e304c8c982ec, type: 3}
+    obstaclesPrefabs:
+    - {fileID: 3051759183457040339, guid: 5172bdfbc7395e143b20bc466886d523, type: 3}
+    - {fileID: 7784100271110538809, guid: fa60ff82b48f0fd40940031cf369d5b0, type: 3}
   score:
     scoreMultiplier: 1
     timeToAddMultiplier: 5
@@ -29,6 +35,9 @@ MonoBehaviour:
     score: 0
     scorePerTime: 5
     coinScore: 100
+  backgroundSpeed: 7
+  itemSpeed: 3.5
+  timeToGameOver: 0
   timeFury: 0
   nomberOfGrow: 0
   grow: 1.2

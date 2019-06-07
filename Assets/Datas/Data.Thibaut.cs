@@ -19,11 +19,26 @@ public partial class Data : ScriptableObject
         public float scorePerTime = 5;
         public float coinScore = 100;
     }
+    [System.Serializable]
+    public class Spawn
+    {
+        public float minTimeToSpawnCoin;
+        public float maxTimeToSpawnCoin;
+        public float minTimeToSpawnObstacle;
+        public float maxTimeToSpawnObstacle;
+        public GameObject coin;
+        public List<GameObject> obstaclesPrefabs;
+    }
+
+
+    public Spawn spawn;
+    public Score score;
 
     public float backgroundSpeed = 1f;
     public float itemSpeed = 1.15f;
     public float timeToGameOver;
 
-    public Score score;
+
+
 
 }
