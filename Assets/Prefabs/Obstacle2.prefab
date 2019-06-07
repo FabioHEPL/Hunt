@@ -134,26 +134,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8215970031033409832, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 1.4190474
-      objectReference: {fileID: 0}
-    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.15512133
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a84bbb28f61524e96d18e103f96e05, type: 3}
 --- !u!4 &453526468227234231 stripped
@@ -173,11 +153,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: caisse-png-2 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3989469483034881323, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_TagString
-      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5085634309546546693, guid: e2a84bbb28f61524e96d18e103f96e05,
         type: 3}
@@ -233,36 +208,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8215970031033409832, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.3874607
-      objectReference: {fileID: 0}
-    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.618091
-      objectReference: {fileID: 0}
-    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.22507858
-      objectReference: {fileID: 0}
-    - target: {fileID: 5269473353475679879, guid: e2a84bbb28f61524e96d18e103f96e05,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.7564685
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a84bbb28f61524e96d18e103f96e05, type: 3}

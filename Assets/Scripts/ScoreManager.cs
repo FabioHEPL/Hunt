@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     private void Awake()
     {
         FindObjectOfType<ScoreToTime>().onScorePerSecondEvent += ScorePerSecondEventListener;
-        FindObjectOfType<Coin>().onCoinCollectEvent += OnCoinCollectEventListener;
+        //FindObjectOfType<Coin>().onCoinCollectEvent += OnCoinCollectEventListener;
     }
 
     public class OnScoreChangeEventArgs : EventArgs
