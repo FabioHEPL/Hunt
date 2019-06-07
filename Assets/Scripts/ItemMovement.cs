@@ -15,6 +15,6 @@ public class ItemMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.Translate(-itemSpeed, 0, 0);
+        gameObject.transform.Translate(-itemSpeed * Time.deltaTime, 0, 0);
     }
 }

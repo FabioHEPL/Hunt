@@ -19,8 +19,7 @@ public class HunterAim : MonoBehaviour
         axeDeTire();
     }
     private void axeDeTire()
-    {
-       ;
+    {       
         Vector2 PlayerPosition = Player.transform.position;
         Vector2 EnemyPosition = transform.position;
         Vector2 BulletRide = PlayerPosition - EnemyPosition;

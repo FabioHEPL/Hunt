@@ -14,12 +14,11 @@ public class LoopingBackground : MonoBehaviour
 
     private void Update()
     {
-        gameObject.transform.Translate(-speed, 0, 0);
+        gameObject.transform.Translate(-speed * Time.deltaTime, 0, 0);
     }
 
     void OnBecameInvisible()
     {
-        Debug.Log("hello");
         float YPos = gameObject.transform.position.y;
         float XPos = gameObject.transform.position.x;
         float newXPos = XPos * (-1);

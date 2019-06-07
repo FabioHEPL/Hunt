@@ -9,7 +9,7 @@ public partial class Data : ScriptableObject
     public class Hunter
     {
         public GameObject bullet;
-        public float BulletSpeed;
+        public float BulletSpeed = 7;
         public float cooldown;
         public float maximumAngle = 10.0f;
         public float minimunAngle = -10.0f;     

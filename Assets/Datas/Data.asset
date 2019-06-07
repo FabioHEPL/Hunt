@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: Data
   m_EditorClassIdentifier: Assembly-CSharp::Data
   hunter:
-    bullet: {fileID: 0}
-    BulletSpeed: 0
-    cooldown: 0
+    bullet: {fileID: 6411233173573338376, guid: 00183e2c13bd2a14db5feba19996a1b3,
+      type: 3}
+    BulletSpeed: 7
+    cooldown: 1
     maximumAngle: 10
     minimunAngle: -10
-  backgroundSpeed: 0.1
-  itemSpeed: 0.1
-  timeToGameOver: 2
+  backgroundSpeed: 7
+  itemSpeed: 3.5
+  timeToGameOver: 0
   score:
     scoreMultiplier: 1
-    timeToAddMultiplier: 1
-    multiplierForce: 0.1
+    timeToAddMultiplier: 5
+    multiplierForce: 0.2
     score: 0
-    scorePerTime: 1
+    scorePerTime: 5
     coinScore: 100
   timeFury: 0
   nomberOfGrow: 0
