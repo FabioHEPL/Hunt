@@ -12,12 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Data
   m_EditorClassIdentifier: Assembly-CSharp::Data
+  hunter:
+    bullet: {fileID: 5001930910866695278, guid: 38b752cc3b8fd5f4a9f6978a785c0dce,
+      type: 3}
+    BulletSpeed: 15
+    cooldown: 2
+    maximumAngle: 10
+    minimunAngle: -10
   score:
-    scoreMultiplier: 1
-    timeToAddMultiplier: 1
-    multiplierForce: 0.5
+    scoreMultiplier: 0
+    timeToAddMultiplier: 0
+    multiplierForce: 0
     score: 0
-    scorePerTime: 1
-    scoreText: {fileID: 0}
+    scorePerTime: 0
   timeFury: 0
   nomberOfGrow: 0
