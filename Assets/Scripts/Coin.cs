@@ -5,19 +5,39 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public GameObject coin;
+    float coinScore;
 
-    public event Action<string> Collided;
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Awake()
     {
-        Collided?.Invoke(collision.gameObject.tag);
+        FindObjectOfType<ColliderManager>().onCollisionEvent += OnCollisionEventListener;
+    }
 
-        if (collision.gameObject.CompareTag("Player"))
+    private void Start()
+    {
+        coinScore = DataContainer.singleton.data.score.coinScore;
+    }
+
+
+
+    public class OnCoinCollectEventArgs : EventArgs
+    {
+        public float score;
+    }
+
+    public EventHandler<OnCoinCollectEventArgs> onCoinCollectEvent;
+
+    private void OnCoinCollectEvent(OnCoinCollectEventArgs e)
+    {
+        if (onCoinCollectEvent != null)
+            onCoinCollectEvent(this, e);
+    }
+
+    private void OnCollisionEventListener(object sender, ColliderManager.onCollisionEventArgs e)
+    {
+        if (e.type.ToString() == "coin")
         {
+            OnCoinCollectEvent(new OnCoinCollectEventArgs() { score = coinScore });
             Destroy(gameObject);
         }
     }
-
 }

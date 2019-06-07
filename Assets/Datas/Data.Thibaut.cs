@@ -17,7 +17,12 @@ public partial class Data : ScriptableObject
         public float multiplierForce;
         public float score;
         public float scorePerTime;
+        public float coinScore;
     }
+
+    public float backgroundSpeed;
+    public float itemSpeed;
+    public float timeToGameOver;
 
     public Score score;
 

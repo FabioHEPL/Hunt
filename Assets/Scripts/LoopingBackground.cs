@@ -5,8 +5,12 @@ using UnityEngine;
 public class LoopingBackground : MonoBehaviour
 
 {
+    float speed;
 
-    float speed = 0.1f;
+    private void Start()
+    {
+        speed = DataContainer.singleton.data.backgroundSpeed;
+    }
 
     private void Update()
     {

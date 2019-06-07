@@ -7,6 +7,7 @@ public class ColliderManager : MonoBehaviour
 {
     public enum colliderType
     {
+        coin,
         powerUp,
         dog,
         obstacle
@@ -24,4 +25,44 @@ public class ColliderManager : MonoBehaviour
         if (onCollisionEvent != null)
             onCollisionEvent(this, args);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       string colliderTag = collision.gameObject.tag;
+        colliderType colliderType;
+
+        if (gameObject.tag == "Player")
+        {
+            switch (colliderTag)
+            {
+                case ("coin"):
+                    colliderType = colliderType.coin;
+                    OnCollisionEvent(new onCollisionEventArgs() { type = colliderType });
+                    break;
+
+                case ("powerUp"):
+                    colliderType = colliderType.powerUp;
+                    break;
+
+                case ("dog"):
+                    colliderType = colliderType.dog;
+                    OnCollisionEvent(new onCollisionEventArgs() { type = colliderType });
+                    break;
+
+                case ("obstacle"):
+                    colliderType = colliderType.obstacle;
+                    break;
+
+                default:
+                    break;
+            }
+        } 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+
+    }
+ 
 }

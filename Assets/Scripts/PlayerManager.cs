@@ -11,7 +11,7 @@ public class JumpArgs : EventArgs
 public class PlayerManager : MonoBehaviour
 {
     public InputManager inputManager;
-    public event EventHandler<JumpArgs> Jump;
+    public event EventHandler<JumpArgs> JumpRequest;
 
     private void OnEnable()
     {
@@ -37,11 +37,11 @@ public class PlayerManager : MonoBehaviour
 
     private void InputManager_JumpButtonPressed(object sender, JumpButtonPressedArgs e)
     {
-        OnJump(new JumpArgs());
+        OnJumpRequest(new JumpArgs());
     }
 
-    protected void OnJump(JumpArgs args)
+    protected void OnJumpRequest(JumpArgs args)
     {
-        Jump?.Invoke(this, args);
+        JumpRequest?.Invoke(this, args);
     }
 }
